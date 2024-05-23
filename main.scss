@@ -1,4 +1,8 @@
 // VARIABLES
+$color-white: #fff;
+
+$color-accent: #2cc695;
+
 $color-grey-light: #eef3f4;
 $color-grey-medium: #a9b4b7;
 $color-grey-dark: #555a5b;
@@ -34,11 +38,32 @@ a {
   text-decoration: none;
 }
 
+// UTILITY CLASS
+.u-italic {
+  font-style: italic;
+}
+
+.u-accent {
+  color: $color-accent;
+}
+
+.u-underline {
+  text-decoration: underline;
+}
+
+.u-bold {
+  font-weight: 500;
+}
+
+.u-bolder {
+  font-weight: 700;
+}
+
 // BASE STYLES
 .page {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
-  color: #fff;
+  color: $color-white;
   display: flex;
   justify-content: center;
   background-image: url(https://bytegrad.com/course-assets/css/2/pattern.svg),
@@ -53,7 +78,7 @@ a {
 .app {
   height: 1030px;
   width: 1240px;
-  background-color: #fff;
+  background-color: $color-white;
   box-shadow: 0 25px 150px rgba(0, 0, 0, 0.65);
   margin: 80px 0;
 
@@ -145,6 +170,8 @@ a {
   }
 }
 
+// ------------------------------------------------
+
 .sidebar {
   background-color: #11271f;
 
@@ -152,12 +179,100 @@ a {
   grid-row: 2 / 4;
 }
 
+.intro {
+  padding: 48px 35px 45px;
+  border-bottom: 1px solid rgba($color-white, 0.1);
+
+  &__text {
+    color: $color-grey-light;
+    font-size: 16px;
+    margin-top: 12px;
+    line-height: 1.8;
+  }
+}
+
+.first-heading {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 34px;
+  line-height: 1;
+}
+
+.social {
+  display: flex;
+  margin: 25px 0 30px;
+  justify-content: center;
+
+  &__img {
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid $color-white;
+
+    &:not(:first-child) {
+      margin-left: -8px;
+    }
+  }
+
+  &__container {
+    margin-left: 10px;
+  }
+
+  &__number {
+    font-weight: 500;
+  }
+
+  &__text {
+    font-size: 12px;
+    color: $color-grey-medium;
+    margin-top: -5px;
+  }
+}
+
+.auth {
+  &__text {
+    color: $color-grey-medium;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  &__link {
+    font-weight: 600;
+    color: $color-accent;
+  }
+}
+
+.btn {
+  background-color: #16b47f;
+  padding: 12px 0;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: $ts;
+
+  &:hover,
+  &:focus {
+    background-color: #119267;
+  }
+
+  &__icon {
+    margin-left: 2px;
+  }
+}
+
+// ------------------------------------------------
+
 .gallery {
   background-color: $color-grey-light;
 
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
+
+// ------------------------------------------------
 
 .steps {
   background-color: #e7edee;
