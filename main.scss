@@ -136,9 +136,6 @@ a {
       color: $color-grey-dark;
     }
   }
-
-  &__icon {
-  }
 }
 
 .nav {
@@ -146,9 +143,6 @@ a {
 
   &__list {
     display: flex;
-  }
-
-  &__item {
   }
 
   &__link {
@@ -321,9 +315,6 @@ a {
     display: flex;
     column-gap: 15px;
     margin-top: 10px;
-  }
-
-  &__item {
   }
 
   &__link {
